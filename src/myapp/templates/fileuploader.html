@@ -1,0 +1,31 @@
+<html>
+        <img src="../media/{{image}}">
+        {% csrf_token %}
+        <form action='/rotate/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>ROTATE</button>
+                <input type='text' name='deg' />
+        </form>
+        <form action='/wbcolor/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>WHITE/BLACK</button>
+        </form>
+        <form action='/resize/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>RESIZE</button>
+                <input type='text' name='length' />
+                <input type='text' name='width' />
+        </form>
+        <form action='/crop/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>CROP</button>
+                <input type='text' name='x' />
+                <input type='text' name='length' />
+                <input type='text' name='width' />
+                <input type='text' name='y' />
+        </form>
+        <form action='/share/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>SHARE</button>
+        </form>
+</html>

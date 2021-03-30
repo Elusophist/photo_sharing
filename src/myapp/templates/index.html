@@ -1,0 +1,16 @@
+
+
+<html lang="en">
+        <body>
+
+        <body>
+        <form action='/upload/' method='POST' enctype="multipart/form-data"> {% csrf_token %}
+                
+                {{ form.as_p }}
+                <button type='submit'>Upload</button>
+        </form>
+        <form action='/gallery/' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type='submit'>GALLERY</button>
+        </form>
+</html>

@@ -1,0 +1,6 @@
+<html>
+        {% for i in ash %}
+            <img src="../media/{{i.photo}}">
+            {% csrf_token %}
+        {% endfor %}
+</html>
